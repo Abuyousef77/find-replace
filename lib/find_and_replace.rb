@@ -1,9 +1,8 @@
 class Findr
-  def initialize(sentence)
-    @og_sentence = sentence
+  def initialize()
+    @og_string = open("some_text.txt").read.chomp
   end
   def magic(find_word, replace_word)
-    @og_sentence.gsub(/#{find_word}/i, replace_word)
-    # return "The cow jumps over the mun"
+    @og_string.gsub(/#{find_word}/i, replace_word)
   end
 end
